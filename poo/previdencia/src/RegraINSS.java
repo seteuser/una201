@@ -1,46 +1,48 @@
 public class RegraINSS {
 
-	/**
-	* verifica se um cidadao está liberado ou pendente de aposentadoria
-	* considerando sua idade e sua regra para aposentadoria, 60 ou 65
-	*/
-	public boolean aposentado(int i, int s) {
 
-		int calculo;
-
-		
-		if (s == 1)
-			calculo = 65 - i;
-		else
-			calculo = 60 - i;
-
-		
-		if (calculo <= 0) {
-			return true;
-		} else {
-			return false;
-		}
-
-	}
-
-	/**
-	* dvolve a pendencia (int), em anos, considerando a 
+    /**
+	* responsabilidade interna que devolve o calculo de acordo com a 
 	* idade do cidadao e sua regra para aposentadoria, 60 ou 65
 	*/
-	public int pendencia(int i, int s) {
+	private int calculo(final int i, final int s) {
 
-		int calculo;
-		
-		if (s == 1)
-			calculo = 65 - i;
-		else
-			calculo = 60 - i;
+        int result;
 
-		if (calculo <= 0) {
-			return 0;
-		} else {
-			return calculo;
-		}
+        if (s == 1)
+            result = 65 - i;
+        else
+            result = 60 - i;
+
+        if (result <= 0) {
+            return 0;
+        } else {
+            return result;
+        }
+
+    }
+
+    /**
+     * verifica se um cidadao está liberado ou pendente de aposentadoria
+     * considerando sua idade e sua regra para aposentadoria, 60 ou 65
+     */
+    public boolean aposentado(final int i, final int s) {
+
+        if (this.calculo(i, s) == 0) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    /**
+     * devolve a pendencia (int), em anos, considerando a idade do cidadao e sua
+     * regra para aposentadoria, 60 ou 65
+     */
+    public int pendencia(int i, int s) {
+
+		return this.calculo(i, s);
 
     }
 }

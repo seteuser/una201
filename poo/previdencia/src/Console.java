@@ -15,9 +15,10 @@ public class Console {
 		System.out.print("Seu sexo (0 ou 1): ");
 		sexo = teclado.nextInt();
 
+
 		System.out.println("\nRelatório Análise ******");
 
-		if (regra.aposentado(idade, sexo) == true) {
+		if (regra.aposentado(idade, sexo)) {
 			System.out.println("LIBERADO!");
 		} else {
 			System.out.println("PENDENTE!");

@@ -13,3 +13,11 @@ versão 1 - 03/03
 ----------------
 Criacao da classe de rule RegraINSS responsavel por controlar o algoritmo para liberação básica de aposentadoria;
 Console depende da colaboração de RegraINSS para aplicação das regras de aposentadoria;
+
+
+versão 2 - 10/03
+----------------
+Melhoria da classe de regra RegraINSS, centralizando a logica de aposentadoria em um unico ponto
+uso do retorno boolean true
+Criacao da classe de rule RegraINSS responsavel por controlar a regra de negocio de liberação básica de aposentadoria;
+Console depende da colaboração de RegraINSS para aplicação das regras de aposentadoria;
