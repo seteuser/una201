@@ -1,0 +1,9 @@
+Projetoo Previdencia
+
+
+versão 0 - 03/03
+----------------
+Não orientado a objeto; uma unica classe, executável, que interage com o usuário 
+aplica a regra de negócio da aposentadoria básica e 
+apresenta o report de análise ao usuário; 
+tudo em uma única classe e único método main();
