@@ -7,3 +7,9 @@ Não orientado a objeto; uma unica classe, executável, que interage com o usuá
 aplica a regra de negócio da aposentadoria básica e 
 apresenta o report de análise ao usuário; 
 tudo em uma única classe e único método main();
+
+
+versão 1 - 03/03
+----------------
+Criacao da classe de rule RegraINSS responsavel por controlar o algoritmo para liberação básica de aposentadoria;
+Console depende da colaboração de RegraINSS para aplicação das regras de aposentadoria;

@@ -5,6 +5,7 @@ public class Console {
 	public static void main(final String[] args) {
 
         final Scanner teclado = new Scanner(System.in);
+        RegraINSS regra = new RegraINSS();
 
         int idade, sexo;
 
@@ -14,23 +15,13 @@ public class Console {
 		System.out.print("Seu sexo (0 ou 1): ");
 		sexo = teclado.nextInt();
 
-
-        int calculo; 
-
-        if (sexo == 1) { 
-            calculo = 65 - idade; //masculino
-        } else {
-            calculo = 60 - idade; //feminino
-        }
-
-
 		System.out.println("\nRelatório Análise ******");
 
-		if (calculo <= 0) {
+		if (regra.aposentado(idade, sexo) == true) {
 			System.out.println("LIBERADO!");
 		} else {
 			System.out.println("PENDENTE!");
-			System.out.println("Falta(m) " + calculo + " anos.");
+			System.out.println("Falta(m) " + regra.pendencia(idade, sexo) + " anos.");
 		}
 
 	}
